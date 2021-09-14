@@ -1,8 +1,13 @@
 package oogunjob;
 
+import oogunjob.vehicle.FordF350;
+import oogunjob.vehicle.HondaFit;
+import oogunjob.vehicle.Vehicle;
+import oogunjob.sift.Sifter;
+
 class Main {
 
-   private static void printVehicle(Vehicle vehicle) {
+   static void printVehicle(Vehicle vehicle) {
       System.out.print(vehicle.getVehicleModel( ) + ": color: " + vehicle.getColor( ));
       System.out.print(", engine: "+ vehicle.getEngine( )); 
       System.out.print(", transmission: "+ vehicle.getTransmission( )); 
@@ -10,10 +15,11 @@ class Main {
       System.out.println(", warranty: "+ vehicle.getWarranty( ) + "\n"); 
    }
 
-    // changed main to 'static void main' to 'public static main'
    public static void main(String[ ] args) {
       Vehicle[ ] vehicles = new Vehicle[4];
-      vehicles[0] = new HondaFit("white");                  
+      vehicles[0] = new HondaFit("white"); // I specified this this way just
+                                                            // to show it can be done. Doing it
+                                                            // like the other packages is fine.
       vehicles[1] = new FordF350("green");
       vehicles[2] = new HondaFit("red");
       vehicles[3] = new FordF350("yellow");

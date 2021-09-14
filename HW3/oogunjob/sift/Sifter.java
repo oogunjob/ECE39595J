@@ -1,6 +1,11 @@
 package oogunjob.sift;
 
-class Sifter {
+import oogunjob.vehicle.FordF350;
+import oogunjob.vehicle.HondaFit;
+import oogunjob.vehicle.Vehicle;
+
+
+public class Sifter {
 
    FordF350[ ] getF350s(Vehicle[ ] candidates) {
       FordF350 fordF350s[ ] = new FordF350[candidates.length];
@@ -18,7 +23,7 @@ class Sifter {
       return fordF350s;
    }
 
-   HondaFit[ ] getFits(Vehicle[ ] candidates) {
+   public HondaFit[ ] getFits(Vehicle[ ] candidates) {
       HondaFit hondaFits[ ] = new HondaFit[candidates.length];
       int F350Count = 0;
       for (int i = 0; i < candidates.length; i++) {

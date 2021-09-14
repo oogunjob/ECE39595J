@@ -1,39 +1,39 @@
 package oogunjob.vehicle;
 
-class Vehicle {
+public class Vehicle {
 
-   private String model;
+   String model;
 
    Vehicle(String _model) {
       model = _model;
       System.out.print(model);
    }
 
-   String getModel( ) { // RINK MAKE PRIVATE
-      return model;
+   String getModel( ) { 
+      return null;
    }
 
-   String getVehicleModel( ) {
+   public String getVehicleModel( ) {
       return getModel( );
    }
 
-   String getColor( ) { 
+   public String getColor( ) { 
       return null;
    }
 
-   String getEngine( ) {
+   public String getEngine( ) {
       return null;
    }
 
-   String getTransmission( ) {
+   public String getTransmission( ) {
       return null;
    }
 
-   int getNumPassengers( ) {
+   public int getNumPassengers( ) {
       return 0;
    }
 
-   String getWarranty( ) {
+   public String getWarranty( ) {
       return null;
    }
 }
