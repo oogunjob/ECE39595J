@@ -1,3 +1,5 @@
+package oogunjob.vehicle;
+
 class FordF350 extends Vehicle {
 
    private String color;
