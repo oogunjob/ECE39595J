@@ -1,3 +1,5 @@
+package oogunjob.vehicle;
+
 class HondaFit extends Vehicle {
 
    private String color;
