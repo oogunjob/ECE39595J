@@ -1,3 +1,5 @@
+package oogunjob;
+
 class Main {
 
    private static void printVehicle(Vehicle vehicle) {
