@@ -1,3 +1,5 @@
+package oogunjob.sift;
+
 class Sifter {
 
    FordF350[ ] getF350s(Vehicle[ ] candidates) {
