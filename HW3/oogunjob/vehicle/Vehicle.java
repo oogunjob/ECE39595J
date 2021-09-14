@@ -1,3 +1,5 @@
+package oogunjob.vehicle;
+
 class Vehicle {
 
    private String model;
