@@ -2,7 +2,7 @@ package oogunjob.vehicle;
 
 public class FordF350 extends Vehicle {
 
-   String color;
+   protected String color;
 
    public FordF350(String _color) {
       super("Ford F350");
@@ -10,7 +10,7 @@ public class FordF350 extends Vehicle {
       System.out.println(" built");
    }
 
-   String getModel( ) { 
+   public String getModel( ) { 
       return model;
    }
 

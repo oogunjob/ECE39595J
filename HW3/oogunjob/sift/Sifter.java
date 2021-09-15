@@ -7,7 +7,7 @@ import oogunjob.vehicle.Vehicle;
 
 public class Sifter {
 
-   FordF350[ ] getF350s(Vehicle[ ] candidates) {
+   public FordF350[ ] getF350s(Vehicle[ ] candidates) {
       FordF350 fordF350s[ ] = new FordF350[candidates.length];
       int F350Count = 0;
       for (int i = 0; i < candidates.length; i++) {

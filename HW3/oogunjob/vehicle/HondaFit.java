@@ -2,7 +2,7 @@ package oogunjob.vehicle;
 
 public class HondaFit extends Vehicle {
 
-   String color;
+   protected String color;
 
    public HondaFit(String _color) {
       super("HondaFit");
@@ -10,7 +10,7 @@ public class HondaFit extends Vehicle {
       System.out.println(" built");
    }
 
-   String getModel( ) { 
+   public String getModel( ) { 
       return model;
    }
 

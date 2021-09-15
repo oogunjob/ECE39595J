@@ -2,14 +2,14 @@ package oogunjob.vehicle;
 
 public class Vehicle {
 
-   String model;
+   protected String model;
 
    Vehicle(String _model) {
       model = _model;
       System.out.print(model);
    }
 
-   String getModel( ) { 
+   public String getModel( ) { 
       return null;
    }
 
