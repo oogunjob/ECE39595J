@@ -48,31 +48,3 @@ public class Test {
       System.out.println("\nThe remote after removing commands:\n"+rc);
    }
 }
-
-class Volume extends Command{
-   static int volume = 0;
-}
-
-class Turndown extends Volume{
-   public void execute(){
-      System.out.println("Volume turned down to " + --volume);
-   }
-}
-
-class Turnup extends Volume{
-   public void execute(){
-      System.out.println("Volume turned up to " + ++volume);
-   }
-}
-
-class Turnon extends Volume{
-   public void execute(){
-      System.out.println("Turning on the TV");
-   }
-}
-
-class Turnoff extends Volume{
-   public void execute(){
-      System.out.println("Turning off the TV");
-   }
-}

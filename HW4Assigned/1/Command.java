@@ -1,5 +1,6 @@
 public abstract class Command{
 
-    public void execute(){
-    }
+    public abstract void execute();
+
+    public abstract String toString();
 }
