@@ -49,18 +49,30 @@ public class ComparableArray {
     */
    public int compareTo(ComparableArray a); 
          
-   public int getElement(int i);
+   public int getElement(int i){
       return ary[i];
    } 
 
    // return the length of ary
-   public int getLength( );
+   public int getLength( ){
+      return ary.length;
+   }
 
    // set all elements of ary to n
-   public void makeNumber(int n);
+   public void makeNumber(int n){
+      for(int i = 0; i < ary.length; i++){
+         ary[i] = n;
+      }
+   }
 
    // print out the elements of ary
    public String toString( ){
+      String str = "";
+      for (int i = 0; i < ary.length; i++){
+         str += ary[i];
+      }
+      
+      return str;
    }
    
    private int min(int i, int j) {

@@ -2,6 +2,10 @@ public class Point extends ComparableArray {
 
    // create constructors as needed.
 
+   public Point(int nextInt, int nextInt2) {
+      
+   }
+
    /*
     * haschCode( ) should return an int based on the values of the object fields
     * equals( ) should return true if two objects are equal based on the values of the

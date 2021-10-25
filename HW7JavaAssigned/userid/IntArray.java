@@ -1,7 +1,13 @@
 public class IntArray extends ComparableArray {
-
-
+   
    // create constructors as necessary
+   public IntArray(int[ ] _ary){
+      super(_ary);
+   }
+
+   public IntArray(ComparableArray comparableArray) {
+      super(comparableArray);
+   }
 
    /*
     * haschCode( ) should return an int based on the values of the object fields
@@ -20,7 +26,8 @@ public class IntArray extends ComparableArray {
     * As long as these rules are followed, you can implement hashCode( ) and equals( )
     * any way you want.
     */
+
    public int hashCode( );
 
-   public boolean equals(IntArray a);
+   public boolean equals(Object a);
 }
