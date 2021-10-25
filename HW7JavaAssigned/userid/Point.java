@@ -3,7 +3,7 @@ public class Point extends ComparableArray {
    // create constructors as needed.
 
    public Point(int nextInt, int nextInt2) {
-      super(new int[] {1,2});
+      super(new int[] {nextInt,nextInt2});
    }
 
    public Point(ComparableArray comparableArray) {
@@ -13,7 +13,7 @@ public class Point extends ComparableArray {
    /*
     * haschCode( ) should return an int based on the values of the object fields
     * equals( ) should return true if two objects are equal based on the values of the
-    * object fields.  Given IntArray objects i1, i2 and i3, it must also be the case 
+    * object fields.  Given pointArray objects i1, i2 and i3, it must also be the case 
     * that 
     * 1. if i1.equals(i2) == i2.equals(i1).
     * 2. i1.equals(i1) is true, for any i1
@@ -32,7 +32,29 @@ public class Point extends ComparableArray {
       return 1;
    }
 
-   public boolean equals(Object a){
-      return true;
+   public boolean equals(Object a){ 
+      // checks to see if the object is an instance of the pointArray class
+      if(a instanceof Point){
+         Point pointA = (Point) a;
+         
+         // checks to see that the size of both arrays are equal
+         if(pointA.ary.length != this.ary.length){
+            return false;
+         }
+
+         else{
+            // checks to see that every elements of the arrays are equal
+            for(int i = 0; i < pointA.ary.length; i++){
+               if(pointA.ary[i] != this.ary[i]){
+                  return false;
+               }
+            }
+         }
+
+         // returns to true, indicating that all elements of the arrays are equal
+         return true;
+      }
+
+      return false;
    }
 }

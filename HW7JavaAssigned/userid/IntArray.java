@@ -18,7 +18,7 @@ public class IntArray extends ComparableArray {
     * 2. i1.equals(i1) is true, for any i1
     * 3. if i1.equals(i2) is true, and i2.equals(i3) is true, then it must be that
     *    i1.equals(i3) is true.
-    * 3. if i1.equals(i2) is true, then i1.hashCode( ) == i2.hashCode( )
+    * 4. if i1.equals(i2) is true, then i1.hashCode( ) == i2.hashCode( )
     *
     * Note that if i1.equals(i2) is false, then i1.hashCode( ) can be equal or not
     *      equal to i2.hashCode( ).
@@ -27,12 +27,33 @@ public class IntArray extends ComparableArray {
     * any way you want.
     */
 
-   // ask about this
    public int hashCode( ){
       return 1;
    }
 
    public boolean equals(Object a){
-      return true;
+      // checks to see if the object is an instance of the IntArray class
+      if(a instanceof IntArray){
+         IntArray intA = (IntArray) a;
+         
+         // checks to see that the size of both arrays are equal
+         if(intA.ary.length != this.ary.length){
+            return false;
+         }
+
+         else{
+            // checks to see that every elements of the arrays are equal
+            for(int i = 0; i < intA.ary.length; i++){
+               if(intA.ary[i] != this.ary[i]){
+                  return false;
+               }
+            }
+         }
+
+         // returns to true, indicating that all elements of the arrays are equal
+         return true;
+      }
+
+      return false;
    }
 }

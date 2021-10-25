@@ -22,7 +22,7 @@ public class ComparableArray {
    }
 
    /* 
-\   * return -1 if this < a, 0 if this equals a, 1 if this > a
+    * return -1 if this < a, 0 if this equals a, 1 if this > a
     * based on the values of the ary members of this and a.
     *
     * Given an array x, x[0] = v0, x[0] = v2, ..., x[n] = vN
@@ -50,8 +50,68 @@ public class ComparableArray {
     * this.ary = [0, 4, 1]  and a.ary = [0, 1, 1, 1, 1], this > a by (4), (k+1 = 1) 
     */
    public int compareTo(ComparableArray a){
-      return 0;
-   } 
+      
+      // checks the sizes of both array, if both are of equal size, compare them
+      if(this.ary.length == a.ary.length){
+         for (int i = 0; i < ary.length; i++){
+            
+            // if this > a, return 1
+            if(this.ary[i] > a.ary[i]){
+               return 1;
+            }
+
+            // if this < a, return -1
+            if(this.ary[i] < a.ary[i]){
+               return -1;
+            }
+         }
+         // both arrays are equal so return 0
+         return 0;
+      }
+
+      // if the arrays are of different sizes
+      else{
+         // in the case that THIS size is larger than the size of a
+         if(this.ary.length > a.ary.length){
+
+            // compares the larger array to the smaller array
+            for(int i = 0; i < this.ary.length; i++){
+               
+               // if this > a, return 1
+               if(this.ary[i] > a.ary[i]){
+                  return 1;
+               }
+
+               // if this < a, return -1
+               if(this.ary[i] < a.ary[i]){
+                  return -1;
+               }
+            }
+
+            // checks to see that the remaining elements of the array are equal to 0
+            return(trailingNonZero(this, a.ary.length));
+         }
+
+         // in the case that a size is larger than THIS size
+         else{
+            // compares the larger array to the smaller array
+            for(int i = 0; i < a.ary.length; i++){
+   
+               // if this > a, return 1
+               if(this.ary[i] > a.ary[i]){
+                  return 1;
+               }
+
+               // if this < a, return -1
+               if(this.ary[i] < a.ary[i]){
+                  return -1;
+               }
+            }
+            // checks to see that the remaining elements of the array are equal to 0
+            return(trailingNonZero(a, this.ary.length));
+         }
+      }
+   }
          
    public int getElement(int i){
       return ary[i];
