@@ -28,8 +28,15 @@ public class Point extends ComparableArray {
     * any way you want.
     */
 
-   public int hashCode( ){
-      return 1;
+    public int hashCode( ){
+      int sum = 0;
+
+      for (int value : ary) {
+         sum += value;
+      }
+      
+      // returns average of the array
+      return sum / ary.length;
    }
 
    public boolean equals(Object a){ 
@@ -55,6 +62,7 @@ public class Point extends ComparableArray {
          return true;
       }
 
+      // two objects are not of the same type
       return false;
    }
 }

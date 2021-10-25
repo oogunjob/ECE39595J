@@ -87,7 +87,6 @@ public class ComparableArray {
                   return -1;
                }
             }
-
             // checks to see that the remaining elements of the array are equal to 0
             return(trailingNonZero(this, a.ary.length));
          }

@@ -28,7 +28,14 @@ public class IntArray extends ComparableArray {
     */
 
    public int hashCode( ){
-      return 1;
+      int sum = 0;
+
+      for (int value : ary) {
+         sum += value;
+      }
+      
+      // returns average of the array
+      return sum / ary.length;
    }
 
    public boolean equals(Object a){
@@ -49,11 +56,11 @@ public class IntArray extends ComparableArray {
                }
             }
          }
-
          // returns to true, indicating that all elements of the arrays are equal
          return true;
       }
 
+      // two objects are not of the same type
       return false;
    }
 }
