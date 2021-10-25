@@ -27,7 +27,12 @@ public class IntArray extends ComparableArray {
     * any way you want.
     */
 
-   public int hashCode( );
+   // ask about this
+   public int hashCode( ){
+      return 1;
+   }
 
-   public boolean equals(Object a);
+   public boolean equals(Object a){
+      return true;
+   }
 }

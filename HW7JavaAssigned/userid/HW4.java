@@ -74,7 +74,7 @@ public class HW4 {
       ComparableArray[ ] compArray = new ComparableArray[4];
       compArray[0] = intArray[0];
       compArray[1] = points[1];
-      compArray[2] = intArray[2];      
+      compArray[2] = intArray[2];
       compArray[3] = points[3];
       sort(compArray);
       print("Printing compArray", compArray);

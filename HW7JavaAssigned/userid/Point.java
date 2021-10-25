@@ -3,7 +3,11 @@ public class Point extends ComparableArray {
    // create constructors as needed.
 
    public Point(int nextInt, int nextInt2) {
-      
+      super(new int[] {1,2});
+   }
+
+   public Point(ComparableArray comparableArray) {
+      super(comparableArray);
    }
 
    /*
@@ -23,7 +27,12 @@ public class Point extends ComparableArray {
     * As long as these rules are followed, you can implement hashCode( ) and equals( )
     * any way you want.
     */
-   public int hashCode( );
 
-   public boolean equals(Point a);
+   public int hashCode( ){
+      return 1;
+   }
+
+   public boolean equals(Object a){
+      return true;
+   }
 }

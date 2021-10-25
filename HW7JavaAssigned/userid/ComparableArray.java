@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ComparableArray {
 
    protected int[ ] ary;
@@ -47,7 +49,9 @@ public class ComparableArray {
     * this.ary = [0, 1, 2, 0, 0]  and a.ary = [0, 1, 2], this == a by (6) 
     * this.ary = [0, 4, 1]  and a.ary = [0, 1, 1, 1, 1], this > a by (4), (k+1 = 1) 
     */
-   public int compareTo(ComparableArray a); 
+   public int compareTo(ComparableArray a){
+      return 0;
+   } 
          
    public int getElement(int i){
       return ary[i];
@@ -67,12 +71,7 @@ public class ComparableArray {
 
    // print out the elements of ary
    public String toString( ){
-      String str = "";
-      for (int i = 0; i < ary.length; i++){
-         str += ary[i];
-      }
-      
-      return str;
+      return Arrays.toString(ary);
    }
    
    private int min(int i, int j) {
