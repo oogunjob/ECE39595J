@@ -52,16 +52,16 @@ public class ComparableArray {
    public int compareTo(ComparableArray a){
       
       // checks the sizes of both array, if both are of equal size, compare them
-      if(this.ary.length == a.ary.length){
+      if(ary.length == a.ary.length){
          for (int i = 0; i < ary.length; i++){
             
             // if this > a, return 1
-            if(this.ary[i] > a.ary[i]){
+            if(ary[i] > a.ary[i]){
                return 1;
             }
 
             // if this < a, return -1
-            if(this.ary[i] < a.ary[i]){
+            if(ary[i] < a.ary[i]){
                return -1;
             }
          }
@@ -72,13 +72,13 @@ public class ComparableArray {
       // if the arrays are of different sizes
       else{
          // in the case that THIS size is larger than the size of a
-         if(this.ary.length > a.ary.length){
+         if(ary.length > a.ary.length){
 
             // compares the larger array to the smaller array
-            for(int i = 0; i < this.ary.length; i++){
+            for(int i = 0; i < a.ary.length; i++){
                
                // if this > a, return 1
-               if(this.ary[i] > a.ary[i]){
+               if(ary[i] > a.ary[i]){
                   return 1;
                }
 
@@ -95,20 +95,20 @@ public class ComparableArray {
          // in the case that a size is larger than THIS size
          else{
             // compares the larger array to the smaller array
-            for(int i = 0; i < a.ary.length; i++){
+            for(int i = 0; i < ary.length; i++){
    
                // if this > a, return 1
-               if(this.ary[i] > a.ary[i]){
+               if(ary[i] > a.ary[i]){
                   return 1;
                }
 
                // if this < a, return -1
-               if(this.ary[i] < a.ary[i]){
+               if(ary[i] < a.ary[i]){
                   return -1;
                }
             }
             // checks to see that the remaining elements of the array are equal to 0
-            return(trailingNonZero(a, this.ary.length));
+            return(trailingNonZero(a, ary.length));
          }
       }
    }
