@@ -30,11 +30,9 @@ public class Point extends ComparableArray {
 
     public int hashCode( ){
       int sum = 0;
-
       for (int value : ary) {
          sum += value;
       }
-      
       // returns average of the array
       return sum / ary.length;
    }
@@ -45,14 +43,19 @@ public class Point extends ComparableArray {
          Point pointA = (Point) a;
          
          // checks to see that the size of both arrays are equal
-         if(pointA.ary.length != this.ary.length){
+         if(pointA.ary.length != ary.length){
+            return false;
+         }
+
+         // compares the hash codes of the two arrays
+         else if(pointA.hashCode() != ary.hashCode()){
             return false;
          }
 
          else{
             // checks to see that every elements of the arrays are equal
             for(int i = 0; i < pointA.ary.length; i++){
-               if(pointA.ary[i] != this.ary[i]){
+               if(pointA.ary[i] != ary[i]){
                   return false;
                }
             }

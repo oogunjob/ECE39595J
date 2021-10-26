@@ -29,13 +29,11 @@ public class IntArray extends ComparableArray {
 
    public int hashCode( ){
       int sum = 0;
-
       for (int value : ary) {
-         sum += value;
+         sum += value * 10;
       }
-      
       // returns average of the array
-      return sum / ary.length;
+      return sum;
    }
 
    public boolean equals(Object a){
@@ -45,6 +43,11 @@ public class IntArray extends ComparableArray {
          
          // checks to see that the size of both arrays are equal
          if(intA.ary.length != this.ary.length){
+            return false;
+         }
+
+         // compares the hash codes of the two arrays
+         else if(a.hashCode() != ary.hashCode()){
             return false;
          }
 

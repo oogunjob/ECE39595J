@@ -50,7 +50,6 @@ public class ComparableArray {
     * this.ary = [0, 4, 1]  and a.ary = [0, 1, 1, 1, 1], this > a by (4), (k+1 = 1) 
     */
    public int compareTo(ComparableArray a){
-      
       // checks the sizes of both array, if both are of equal size, compare them
       if(ary.length == a.ary.length){
          for (int i = 0; i < ary.length; i++){
@@ -107,7 +106,7 @@ public class ComparableArray {
                }
             }
             // checks to see that the remaining elements of the array are equal to 0
-            return(trailingNonZero(a, ary.length));
+            return(-trailingNonZero(a, ary.length));
          }
       }
    }
