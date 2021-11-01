@@ -31,10 +31,10 @@ public class Point extends ComparableArray {
     public int hashCode( ){
       int sum = 0;
       for (int value : ary) {
-         sum += value;
+         sum += value * 10;
       }
       // returns average of the array
-      return sum / ary.length;
+      return sum;
    }
 
    public boolean equals(Object a){ 
