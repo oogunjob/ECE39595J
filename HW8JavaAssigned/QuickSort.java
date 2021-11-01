@@ -12,7 +12,9 @@ public class QuickSort implements Command{
       }
    }
 
-   public void sort( ) {
+   // The execute function will initiate a quick sort of the QuickSort object’s arr element
+   @Override
+   public void execute( ) {
       quickSort(0, arr.length-1);
    }
 
@@ -71,11 +73,5 @@ public class QuickSort implements Command{
 
       str += toString();
       return str;
-   }
-
-   // The execute function will initiate a quick sort of the QuickSort object’s arr element
-   @Override
-   public void execute() {
-      sort();
    }
 }

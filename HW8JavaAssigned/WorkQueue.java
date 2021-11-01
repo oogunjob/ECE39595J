@@ -13,9 +13,6 @@ public class WorkQueue {
     }
 
     public Command get(){
-        Command reference = arr.get(arr.size() - 1);
-        arr.remove(arr.size() - 1);
-        
-        return reference;
+        return arr.remove(arr.size() - 1);
     }
 }

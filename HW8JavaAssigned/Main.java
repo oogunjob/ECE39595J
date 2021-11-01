@@ -14,7 +14,7 @@ public class Main {
       sortSize = 512000;
       for (int i=0; i<numSorts; i++) {
          long startTime = System.nanoTime( );
-         sorts[i].sort( );
+         sorts[i].execute( );
          long endTime = System.nanoTime( );
          System.out.println("start: "+startTime+", end: "+endTime);
          System.out.println("Sort of "+sortSize+" ints took "+ (endTime-startTime)/100000. +" milliseconds");
