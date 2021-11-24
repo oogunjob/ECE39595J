@@ -13,8 +13,7 @@ public class QuickSort implements Command{
    }
 
    // The execute function will initiate a quick sort of the QuickSort object’s arr element
-   @Override
-   public void execute( ) {
+   public void sort( ) {
       quickSort(0, arr.length-1);
    }
 
@@ -24,7 +23,7 @@ public class QuickSort implements Command{
          stride = arr.length / 32;
       }
       String ret = "num elements sorted: " + arr.length + "\n";
-      for (int i=0; i<arr.length; i+=stride) {
+      for (int i = 0; i < arr.length; i += stride) {
          ret += " " + arr[i]; 
       }
       ret += "\n\n";
@@ -66,10 +65,18 @@ public class QuickSort implements Command{
    /* will print out “quicksort of length “ followed by the length of the array 
     * and the toString() information for a quicksort object
     */
+
+
+   @Override
+   public void execute(){
+      sort();
+   }
+
+
    @Override
    public String identify(){
       String str = "quick sort of length: ";
-      str += String.valueOf(arr.length);
+      str += String.valueOf(arr.length) + "\n";
 
       str += toString();
       return str;

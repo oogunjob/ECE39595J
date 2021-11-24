@@ -5,7 +5,7 @@ public class DotProduct implements Command{
     public static Random rando = new Random( );
     private int arr_A[ ];
     private int arr_B[ ];
-    private int product;
+    private int result;
 
     /* The DotProduct class has a constructor that takes a single int
      * argument that defines the length of the arrays that will be multiplied together. The arrays will be
@@ -34,8 +34,7 @@ public class DotProduct implements Command{
         str += String.valueOf(arr_A.length);
 
         // computes dot product and returns the result
-        execute();
-        str += ", the result is " + String.valueOf(product);
+        str += ", the result is " + String.valueOf(result);
 
         return str;
     }
@@ -43,12 +42,12 @@ public class DotProduct implements Command{
     /* The execute function will perform the dot product */
     @Override
     public void execute() {
-        int _product = 0;
+        int product = 0;
  
         // loop for calculating dot product
         for (int i = 0; i < arr_A.length; i++)
-            _product = _product + arr_A[i] * arr_B[i];
+            product = product + arr_A[i] * arr_B[i];
         
-        product = _product;
+        result = product;
     }
 }
